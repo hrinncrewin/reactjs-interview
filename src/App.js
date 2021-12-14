@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './component/Home';
+import Employee from './component/employee/Employee';
 
 
 function App() {   
@@ -14,7 +15,8 @@ function App() {
                   <Switch>
                       <Route path="/" exact component={Home} />
                       <Route path="/home" component={Home} />
-                 
+                      <Route path="/employee" component={Employee} />
+                     
                   </Switch>
               </div>
           </Router>
