@@ -7,7 +7,12 @@ class Home extends Component {
     }
   
     render() {
-        return ( <h2 className="text-center">Home</h2>);
+        return ( 
+            <>
+        <h2 className="text-center">Home</h2>
+        <a href="/employee">Employee</a>
+        </>
+        );
     }
 
 }
