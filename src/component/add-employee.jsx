@@ -1,25 +1,6 @@
 import React, { Component } from 'react'
 
-function Grid () {
-        return (
-            <table>
-                {this.state.employee.map(e => {
-                    return (
-                    <tr>
-                        <td {e.firstName} </td>
-                        <td> {e.lastName} </td>
-                        <td>{e.dob} </td>
-                        <td> {e.designation} </td>
-                        <td> {e.profilePhotoLink}</td>
-                        <td>{e.experience}</td>
-                    </tr>
-                    )
-                })}
-            </table>
-        );
-    }
-}
-class Home extends Component {
+class AddEmployee extends Component {
 
     state = {
         employee : []
@@ -64,7 +45,7 @@ class Home extends Component {
                 <button onClick={this.onEmpAdd}> Add </button>
             </div>
             <ul>
-                {this.renderGrid()}
+                {this.state.employee.map(e => <li>Employee Details : {e.firstName} | {e.lastName} | {e.dob} | {e.designation} | {e.profilePhotoLink} | {e.experience}</li>)}
             </ul>
         </ div>
         );
@@ -72,4 +53,4 @@ class Home extends Component {
 
 }
 
-export default Home;
+export default AddEmployee;
