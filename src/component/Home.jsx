@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import EmployeeDetails from "./EmployeeDetails";
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-    constructor(props) {
-        super(props);
-    }
-  
-    render() {
-        return ( <h2 className="text-center">Home</h2>);
-    }
-
+  render() {
+    return <EmployeeDetails />;
+  }
 }
 
 export default Home;
