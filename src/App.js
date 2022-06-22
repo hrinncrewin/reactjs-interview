@@ -1,23 +1,20 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Home from './component/Home';
+import { Route, Routes } from 'react-router-dom'
+import Home from './Screens/Home';
+import EmployeeManagerScreen from './Screens/EmployeeManager';
+import { EmpoyeeManager } from './Context/EmployeeManager';
 
 
 function App() {   
 
   return (
       <div className="container">
-          <Router>
-              <div className="col-md-12">
-                  <h1 className="text-center" style={style}></h1>
-                  <Switch>
-                      <Route path="/" exact component={Home} />
-                      <Route path="/home" component={Home} />
-                 
-                  </Switch>
-              </div>
-          </Router>
+          <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="home" element={<Home />} />
+        <Route path="EmployeeManager" element={<EmpoyeeManager><EmployeeManagerScreen /></EmpoyeeManager>} />
+      </Routes>
       </div>
   );
 }
